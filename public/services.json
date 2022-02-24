@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "Fresh Fruits",
+      "price": "400",
+      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "img": "https://i.ibb.co/xFXGWzC/service-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Fresh Vegetables",
+      "price": "800",
+      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "img": "https://i.ibb.co/mNg4g9t/service-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Naturals Wheats",
+      "price": "800",
+      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "img": "https://i.ibb.co/hg7mr64/service-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sweet potato",
+      "price": "300",
+      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "img": "https://i.ibb.co/KV27bKM/Sweet-potato.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Broccoli",
+      "price": "300",
+      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "img": "https://i.ibb.co/4MtVfW3/Broccoli-isolated-on-white-background.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Raspberry",
+      "price": "300",
+      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "img": "https://i.ibb.co/WxjfDT2/Raspberry.jpg"
+    }
+]

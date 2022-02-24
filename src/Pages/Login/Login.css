@@ -1,0 +1,7 @@
+.login-img {
+    width: 70%;
+}
+.buttonSingle:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}

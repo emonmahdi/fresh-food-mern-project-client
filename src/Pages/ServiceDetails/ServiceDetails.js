@@ -1,73 +1,105 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import Navigation from "../../Components/Home/Navigation/Navigation";
-
-
-const detailsStyle ={
-    border: '2px solid #ddd',
-    margin: '50px 0px'
-}
-
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import { useForm } from 'react-hook-form';  
+import useAuth from '../../Components/hooks/useAuth';
+import Navigation from '../../Components/Home/Navigation/Navigation';
+import Swal from 'sweetalert2';
 
 const ServiceDetails = () => {
-  const { Id } = useParams();
-  const [singleDetails, setSingleDetails] = useState([]);
-  console.log(singleDetails);
-  const [getDetails, setGetDetails] = useState({});
+    const {Id} = useParams();  
+    const {user} = useAuth();
+    // console.log(user); 
 
-  useEffect(() => {
-    fetch("/services.json")
-      .then((res) => res.json())
-      .then((data) => setSingleDetails(data));
-  }, []);
+    const [singleDetails, setSingleDetails] = useState([]);
+    // console.log(singleDetails)
+    
+    const [getDetails, setGetDetails] = useState({})
+    console.log(getDetails)
 
-  useEffect(() => {
-    const productId = Id;
-    const details = singleDetails.find((product) => product.id == productId);
-    console.log(details)
-    setGetDetails(details);
-    // console.log(setGetDetails(details))
-  }, [singleDetails]);
-  return (
-    <div> 
-     <Navigation />
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6">
-            <div style={detailsStyle} className="details p-4">
-              <div className="row">
-                <div className="col-md-8">
-                  <div className="img-service">
-                    <img src={getDetails?.img} className="img-fluid" alt="" />
-                  </div>
-                  <p className="text-start my-3">{getDetails?.description}</p>
+    useEffect( () => {
+        fetch('http://localhost:5000/products') 
+            .then(res => res.json())
+            .then(data => setSingleDetails(data))
+    }, []) 
+
+    useEffect( () => {
+      const details = singleDetails.find(td => td._id == Id );
+      setGetDetails(details);
+    }, [singleDetails]);
+ 
+      // ===========================================
+      const { register, handleSubmit, reset, formState: { errors } } = useForm();
+         const axios = require('axios');
+         const onSubmit = data => {
+             console.log(data) 
+          //    data.status = 'Pending';
+             data.getDetails= getDetails;
+          axios.post('http://localhost:5000/orders', data)
+              .then(res => {
+                  if(res.data.insertedId){
+                    Swal.fire(
+                      'Congratulations!',
+                      'Order Food Successfully',
+                      'success'
+                    )
+                      reset();
+                  }
+              })
+         }
+
+    return (
+        <>
+        <Navigation />
+        <div className='container my-4 pb-5'>
+            <div className="row"> 
+                {/* ======================================= */}
+                 <div className="col-lg-6 bg-light ">
+                    <div className="single-details-services p-3 text-start">
+                        <div className="title">
+                            <h2 className='fw-bold mb-4'>{getDetails?.name}</h2> 
+                        </div>
+                        <div className="single-details-img  rounded">
+                            <div className="row">
+                                <div className="col-md-6">
+                                <img src={getDetails?.image}  className='img-fluid mx-auto rounded-3 shadow' alt="" />
+                                </div>
+                                <div className="col-md-6">
+                                    <h4 className='text-end'>
+                                         <span className='text-primary  fw-bold'>Price: {getDetails?.price} Taka</span> 
+                                    </h4>
+                                </div>
+                            </div>
+                        </div> 
+                        <p className='my-4'>{getDetails?.description}</p>
+                        
+                    </div>
                 </div>
-                <div className="col-md-4 border-start">
-                  <div className="price mt-4">
-                    <h3>Price: <span className="text-danger">{getDetails?.price}TK</span></h3>
-                  </div>
+                {/* ============================= */}
+                <div className="col-lg-6">
+                <h3 className='mb-3 fw-bold'>Booking Order Information</h3>
+                   
+                    <form onSubmit={handleSubmit(onSubmit) } className='p-3 border bg-light'> 
+                        <input type='text' className='form-control mb-2'   {...register("name")} value={user.displayName} placeholder='Name' />
+                          
+
+                        <input type='text' value={user.email} className='form-control mb-2' {...register("email", { required: true })} placeholder='Email' />  
+ 
+
+                        <input type='text' className='form-control mb-2' {...register("address", { required: true })} placeholder='Address' /> 
+
+                        <input type='text' className='form-control mb-2' {...register("phone", { required: true })} placeholder='Phone' /> 
+
+                        <input type='text' className='form-control mb-2' {...register("quantity",  { required: true })} placeholder='quantity'/>  
+
+                        {errors.exampleRequired && <span>This field is required</span>}
+                        
+                        <input className='btn btn-warning' value='Place Order' type="submit" />
+                    </form>
                 </div>
-              </div>
             </div>
-          </div>
-          <div className="col-lg-6">
-              <div style={detailsStyle}  className="order-form">
-                  
-                  <form className="p-5">
-                      <h3>Confirm Your Order Your  </h3>
-                      <input type="email" className="form-control my-3" placeholder="Email"/>
-                      <input type="text" className="form-control mb-3" placeholder="Name"/>
-                      <input type="phone" className="form-control mb-3" placeholder="Phone"/>
-                      <input type="text" className="form-control mb-3" placeholder="Address"/>
-                      <input type="text" className="form-control mb-3" placeholder="Quantity"/>
-                      <button className="btn btn-warning">Place Order</button>
-                  </form>
-              </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+        </>
+    );
 };
 
 export default ServiceDetails;

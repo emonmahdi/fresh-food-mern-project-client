@@ -3,42 +3,147 @@
       "id": 1,
       "name": "Fresh Fruits",
       "price": "400",
-      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "description": "Fresh produce means fruits and vegetables that have not been processed in any manner. This term does not include such items as dried fruits and vegetables, potted or dried herbs, wild rice, nuts of any kind including raw nuts, popcorn, fruit or vegetable plants/seedlings, dried beans/peas, seeds/grains, flowers, maple syrup, cider, eggs, meat, cheese, and seafood.Fresh FruitsOrganically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
       "img": "https://i.ibb.co/xFXGWzC/service-1.jpg"
     },
     {
       "id": 2,
       "name": "Fresh Vegetables",
       "price": "800",
-      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "description": "In common usage, the term vegetable usually refers to the edible portions of certain herbaceous plants. These plant parts are either eaten fresh or prepared in several ways.",
       "img": "https://i.ibb.co/mNg4g9t/service-2.jpg"
     },
     {
       "id": 3,
       "name": "Naturals Wheats",
       "price": "800",
-      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "description": "The wheat grain comprises three groups of major components, starch, protein, and cell wall polysaccharides (dietary fiber), and a range of minor components that may confer benefits to human health. Detailed analyses of dietary fiber and other bioactive components were carried out under the EU FP6 HEALTHGRAIN program on 150 bread wheat lines grown on a single site, 50 lines of other wheat species and other cereals grown on the same site, and 23–26 bread wheat lines grown in six environments.",
       "img": "https://i.ibb.co/hg7mr64/service-3.jpg"
     },
     {
       "id": 4,
-      "name": "Sweet potato",
+      "name": "Fresh Healthy Mix Fruits",
       "price": "300",
-      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
-      "img": "https://i.ibb.co/KV27bKM/Sweet-potato.jpg"
+      "description": "Mixed Fruits is exactly what it appears to be – a mix of assorted fruits! While a blend of sliced peaches, strawberries, pineapple, mangoes, dates, apricots and grapes is absolutely heavenly, you can opt for a different selection of fruits depending on the recipe requirement",
+      "img": "https://i.ibb.co/8brLYvg/Fruit-mix-over-white-background.jpg"
     },
     {
       "id": 5,
       "name": "Broccoli",
       "price": "300",
-      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "description": "Brassica oleracea, is an herbaceous annual or biennial grown for its edible flower heads which are used as a vegetable. The broccoli plant has a thick green stalk, or stem, which gives rise to thick, leathery, oblong leaves which are gray-blue to green in color.",
       "img": "https://i.ibb.co/4MtVfW3/Broccoli-isolated-on-white-background.jpg"
     },
     {
       "id": 6,
       "name": "Raspberry",
       "price": "300",
-      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "description": "Raspberries are small, aggregate fruits that generally average 1 to 3 centimeters in diameter and have a round, oval, to oblong shape. Despite the fruits resembling berries, Raspberries are developed from tiny round drupelets that fuse together to create a solid but bumpy, textured, and bubbled appearance",
       "img": "https://i.ibb.co/WxjfDT2/Raspberry.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Capsicum",
+      "price": "1300",
+      "description": "Capsicum, also known as red pepper or chili pepper, is an herb. Its fruit is commonly applied to the skin for arthritis pain and other conditions. The fruit of the capsicum plant contains a chemical called capsaicin. Capsaicin is what seems to help reduce pain and swelling.",
+      "img": "https://i.ibb.co/W3Qvy0j/Colorful-peppers-over-white-background.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Seasonal Vegetables",
+      "price": "300",
+      "description": "When a fruit or vegetable is in season, it means that at that time of year it is at its peak, in terms of flavour or harvest. Eating seasonally is a healthier, more economic and environmentally friendly way of getting your daily 2 fruits and 5 vegetables that is often overlooked.",
+      "img": "https://i.ibb.co/BgGhVhm/Assortment-of-fresh-fruits-and-vegetables.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Colorful Badhacopy",
+      "price": "300",
+      "description": "Cabbage structurally consists of clusters of stiff leaves superimposed in compact layers, allowing it to aquire round or globular shape vegetable. Fresh cabbage is an excellent source of natural antioxidant, vitamin C. Provides 36.6 mg or about 61% of RDA per 100 g. Regular consumption of foods rich in vitamin C helps the body develop resistance against infectious agents and scavenge harmful, pro-inflammatory free radicals.",
+      "img": "https://i.ibb.co/kGMgVTn/Still-life-of-vegetables-with-dark-background.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Green Salad papers masrooms",
+      "price": "300",
+      "description": "Bring enough water to the boil in a saucepan to cover the peppers when added. Add the peppers and cook about two minutes, no longer. Remove the peppers but leave the water in the saucepan.",
+      "img": "https://i.ibb.co/JqypTyF/Fresh-vegetables-green-salad-peppers-mushrooms-and-eggplant-on-kitchen-table-cooking-process.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Roasted autumn vegetable",
+      "price": "300",
+      "description": "Organically grown crops tend use natural fertilizers like manure to improve growth to plant . Animals raised organically are",
+      "img": "https://i.ibb.co/R75cdpb/Full-background-of-colorful-roasted-autumn-vegetables-above-view.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Peyas and pea pods",
+      "price": "300",
+      "description": "Roasting your vegetables adds a wonderful depth of flavor and texture. Hearty root vegetables are especially phenomenal when roasted. All you really need is olive oil and seasoning and voila!",
+      "img": "https://i.ibb.co/Kx9Q4J1/8.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Fresh Vegetables",
+      "price": "300",
+      "description": "How do you define a vegetable? A vegetable is the edible portion of a plant. Vegetables are usually grouped according to the portion of the plant that is eaten such as leaves (lettuce), stem (celery), roots (carrot), tubers (potato), bulbs (onion) and flowers (broccoli)",
+      "img": "https://i.ibb.co/ZmWfpwQ/assortment-of-fresh-vegetables-on-white-background.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Various-Legumes-colorful",
+      "price": "300",
+      "description": "Well-known legumes include beans, soybeans, peas, chickpeas, peanuts, lentils, lupins, mesquite, carob, tamarind, alfalfa, and clover. Legumes produce a botanically unique type of fruit – a simple dry fruit that develops from a simple carpel and usually dehisces (opens along a seam) on two sides.",
+      "img": "https://i.ibb.co/TvfvtfZ/Various-Legumes-colorful-beans-top-view.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Vegetable salad bowl",
+      "price": "300",
+      "description": "A mixture of raw usually green leafy vegetables (as lettuce) combined with other vegetables (as tomato and cucumber) and served with a dressing. 2 : a mixture of small pieces of food (as meat, fish, pasta, fruit, or vegetables) usually combined with a dressing. More from Merriam-Webster on salad.",
+      "img": "https://i.ibb.co/1br3HKW/Vegetable-salad-bowl-in-woman-hands-Fresh-kale-and-baked-pumpkin-salad-Healthy-eating-concept.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Clean eating vegetables",
+      "price": "300",
+      "description": "The fundamentals of eating clean encourage you to consume more whole foods such as fruits, vegetables, lean proteins, whole grains and healthy fats — and limit highly processed snack foods, sweets and other packaged foods.",
+      "img": "https://i.ibb.co/ZxBFmyw/Set-raw-healthy-food-clean-eating-vegetables-source-of-protein-for-vegetarians-cucumber-lucerne-zucc.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Colorful healthy sliced vegetables",
+      "price": "300",
+      "description": "Fruits and vegetables get their coloration from phytochemicals, natural bioactive compounds which, in addition to giving many fruits and veggies their eye-catching hues, also promote good health. In fact, the most vibrantly colored fruits and vegetables are the richest in vitamins, minerals, fiber and antioxidants",
+      "img": "https://i.ibb.co/hL6B098/A-plate-with-colorful-healthy-sliced-vegetables-and-dips-Close-up-Healthy-vegetarian-food.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Organic food",
+      "price": "300",
+      "description": "Organic food is grown without the use of synthetic chemicals, such as human-made pesticides and fertilizers, and does not contain genetically modified organisms (GMOs). Organic foods include fresh produce, meats, and dairy products as well as processed foods such as crackers, drinks, and frozen meals.",
+      "img": "https://i.ibb.co/BqKL1zV/Macro-photography-of-fresh-spinach-Concept-of-organic-food.jpg"
+    },
+    {
+      "id": 19,
+      "name": "farm-fresh-cabbage",
+      "price": "300",
+      "description": "We provide containers. No ladders needed to pick from fruit trees. Animals/Pets are not allowed.We grow blackberries, peaches, apples, pears, prunes, nectarines, peppers (hot, sweet, bell), eggplant, tomatoes, beans, cucumbers, sweet corn, squash and pumpkins ",
+      "img": "https://i.ibb.co/hXfjx64/farm-fresh-cabbage-detail-with-dewdrops.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Fruit mix",
+      "price": "300",
+      "description": "Fruit mix is a glazed mix full of orange and lemon peel, cherries, pineapple and citron for a colorful candied creation! Try adding this mix to your favorite fruit salad recipe or as an ingredient in holiday fruit cake. This special mello mix also makes a beautiful garnish for drinks and other desserts.",
+      "img": "https://i.ibb.co/8rJ4wCs/Fruit-mix-over-white-background.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Sweet Potato",
+      "price": "300",
+      "description": "Sweet potato stems are usually long and trailing and bear lobed or unlobed leaves that vary in shape. The flowers, borne in clusters in the axils of the leaves, are funnel-shaped and tinged with pink or rose-violet.",
+      "img": "https://i.ibb.co/KV27bKM/Sweet-potato.jpg"
     }
 ]

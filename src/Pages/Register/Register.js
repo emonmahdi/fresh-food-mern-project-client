@@ -37,7 +37,7 @@ const Register = () => {
 
 
    // handleOnChange
-  const handleOnChange =(e) => {
+  const handleOnBlur =(e) => {
     const field = e.target.name;
     const value = e.target.value;
     const newLoginData = { ...loginData }
@@ -54,8 +54,8 @@ const Register = () => {
         return;
       }
       
-      registerUser(loginData.email, loginData.password)
-      
+      registerUser(loginData.email, loginData.password, loginData.name, navigate)
+      console.log(loginData.name);
       e.preventDefault();
     }
 
@@ -78,18 +78,19 @@ const Register = () => {
             {user?.email &&  <h4 className="bg-success text-light p-3 mt-2">User create successfully</h4> }
             {!isLoading && <form onSubmit={handleRegisterSubmit} className="w-75 mx-auto p-4 shadow mt-3 rounded-3 mb-5">
               <h3 className='my-4 fs-5'>Sign Up</h3>
-              <input
-                type="text"
+              <input 
                 style={inputStyle}
-                name="displayName"
-                onChange={handleOnChange}
+                name="name"
+                required
+                onBlur={handleOnBlur}
                 placeholder="Your Name"
                 className="form-control mb-3"
               />
               <input
                 type="email"
                 name="email"
-                onChange={handleOnChange}
+                required
+                onBlur={handleOnBlur}
                 style={inputStyle}
                 placeholder="Your Email"
                 className="form-control mb-3"
@@ -97,7 +98,7 @@ const Register = () => {
               <input
                 type="password"
                 name="password"
-                onChange={handleOnChange}
+                onBlur={handleOnBlur}
                 style={inputStyle}
                 placeholder="Your Password"
                 className="form-control mb-3"
@@ -105,7 +106,7 @@ const Register = () => {
               <input
                 type="password"
                 name="password2"
-                onChange={handleOnChange}
+                onBlur={handleOnBlur}
                 style={inputStyle}
                 placeholder="Your Confirm Password"
                 className="form-control mb-3"

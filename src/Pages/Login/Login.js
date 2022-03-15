@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Alert, Spinner } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom"; 
 import Navigation from "../../Components/Home/Navigation/Navigation";
-import useAuth from "../../Components/hooks/useAuth";
-import useFirebase from "../../Components/hooks/useFirebase";
+import useAuth from "../../Components/hooks/useAuth"; 
 import loginImage from "./login-2.jpg";
 import './Login.css' 
 
@@ -31,7 +30,7 @@ const inputStyle = {
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
-  const {user, loginUser, signInUsingGoogle, setUser,isLoading, setIsLoading, authError} = useAuth();
+  const {user, loginUser, signInUsingGoogle, setUser,isLoading, setIsLoading, authError, savedUser, setAuthError} = useAuth();
   
   // redirect history for returning from log in page to where user came
   const navigate = useNavigate();
@@ -43,11 +42,12 @@ const Login = () => {
     signInUsingGoogle(location,navigate)
       .then(result => {
         const user = result?.user
+        savedUser(user?.email, user?.displayName, 'PUT')
         setUser(user)
-        const destination = location?.state?.from || '/';
+        const destination = location?.state?.from || '/dashboard';
         navigate(destination);
        }).catch(error => {
-        console.log(error.message)
+        setAuthError(error.message)
        })
        .finally(() => setIsLoading(false))
   }
@@ -94,7 +94,7 @@ const Login = () => {
               <input
                 type="email"
                 name='email'
-                onChange={handleOnChange}
+                onBlur={handleOnChange}
                 style={inputStyle}
                 required
                 placeholder="Your Email"
@@ -103,7 +103,7 @@ const Login = () => {
               <input
                 type="password"
                 name="password"
-                onChange={handleOnChange}
+                onBlur={handleOnChange}
                 style={inputStyle}
                 placeholder="Your Password"
                 className="form-control mb-3"

@@ -85,7 +85,7 @@ const Login = () => {
           <div className="col-lg-6 mt-3 pb-5">
               {authError && <Alert variant="danger mt-3">{authError}</Alert>}
               {user?.email &&  <p className="bg-success text-light p-2 mt-2">Login successfully</p> }
-              {isLoading && 
+              {isLoading &&  
               <Spinner animation="border" role="status">
                 <span className="visually-hidden">Loading...</span>
               </Spinner>}
@@ -125,13 +125,13 @@ const Login = () => {
               
               <div className="my-3">
                 <p>Don't have an account? <Link to='/register'>Sign up</Link> </p>
-              </div>
-
-              
+              </div> 
             </form>
+             
           </div>
         </div>
       </div>
+  
     </div>
   );
 };

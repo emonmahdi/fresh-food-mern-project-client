@@ -20,6 +20,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import { FcHome, FcRating, FcPaid, FcPlus, FcPositiveDynamic, FcBarChart, FcBusinessman } from "react-icons/fc";
 import useAuth from '../../../Components/hooks/useAuth';
+import MyOrder from '../MyOrder/MyOrder';
 
 
 const drawerWidth = 240;
@@ -27,8 +28,8 @@ const drawerWidth = 240;
 function Dashboard(props) {
   const { window } = props;
   const {user, admin, logOut} = useAuth()
-  console.log(admin)
-  console.log(user.photoURL)
+  // console.log(admin)
+  // console.log(user.photoURL)
   const [mobileOpen, setMobileOpen] = React.useState(false);
    
   const handleDrawerToggle = () => {
@@ -121,7 +122,16 @@ function Dashboard(props) {
 
       </List>
       <Divider /> 
-       <Button onClick={logOut} style={{margin:'15px 0'}} variant="contained">Logout</Button>
+      <Box>
+        <List>
+        <ListItem>
+            <Button onClick={logOut} style={{margin:'15px 30px'}} variant="contained"> 
+              Logout
+            </Button>
+          </ListItem>
+        </List> 
+        </Box>
+       
     </div>
   );
 
@@ -132,6 +142,7 @@ function Dashboard(props) {
       <CssBaseline />
       <AppBar
         position="fixed"
+        style={{background:'#351E83'}}
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
@@ -196,8 +207,7 @@ function Dashboard(props) {
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar />  
-
+        <Toolbar />   
         <Outlet></Outlet>
       </Box> 
      

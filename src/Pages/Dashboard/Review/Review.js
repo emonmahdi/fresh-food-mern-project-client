@@ -27,7 +27,7 @@ const Review = () => {
             star: value,
             customerName: user?.displayName
         }
-        axios.post('http://localhost:5000/review', review)
+        axios.post('https://limitless-shore-74822.herokuapp.com/review', review)
         .then(res => {
             if(res.data.insertedId){
                 Swal.fire({

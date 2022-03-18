@@ -14,7 +14,7 @@ const MyOrder = () => {
   const emai = user?.email;
   // console.log(emai);
   useEffect(() => {
-    fetch(`http://localhost:5000/orders/${emai}`)
+    fetch(`https://limitless-shore-74822.herokuapp.com/orders/${emai}`)
       .then((res) => res?.json())
       .then((data) => setOrders(data));
   }, [emai]);
@@ -24,7 +24,7 @@ const MyOrder = () => {
   const handleDeleteOrder = (id) => {
     const confirm = window.confirm("Are You sure! Your order is Deleted");
     if(confirm){
-      axios.delete(`http://localhost:5000/order/delete/${id}`).then((res) => {
+      axios.delete(`https://limitless-shore-74822.herokuapp.com/order/delete/${id}`).then((res) => {
       if (res.data.deletedCount > 0) {
         Swal.fire({
           position: "center",

@@ -17,7 +17,7 @@ const ServiceDetails = () => {
     console.log(getDetails)
 
     useEffect( () => {
-        fetch('http://localhost:5000/products') 
+        fetch('https://limitless-shore-74822.herokuapp.com/products') 
             .then(res => res.json())
             .then(data => setSingleDetails(data))
     }, []) 
@@ -30,11 +30,12 @@ const ServiceDetails = () => {
       // ===========================================
       const { register, handleSubmit, reset, formState: { errors } } = useForm();
          const axios = require('axios');
-         const onSubmit = data => {
+         const onSubmit = data => { 
              console.log(data) 
           //    data.status = 'Pending';
-             data.getDetails= getDetails;
-          axios.post('http://localhost:5000/orders', data)
+             data.getDetails = getDetails;
+             data.status = 'Pending';
+          axios.post('https://limitless-shore-74822.herokuapp.com/orders', data)
               .then(res => {
                   if(res.data.insertedId){
                     Swal.fire(

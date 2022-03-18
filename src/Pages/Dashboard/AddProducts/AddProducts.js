@@ -11,7 +11,7 @@ const AddProducts = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    axios.post("http://localhost:5000/products", data).then((res) => {
+    axios.post("https://limitless-shore-74822.herokuapp.com/products", data).then((res) => {
       
     if(res.data.insertedId){
         // alert('Added Food Successfully');

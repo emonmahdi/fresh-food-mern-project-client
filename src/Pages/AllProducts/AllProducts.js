@@ -7,7 +7,7 @@ import AllProductsDesign from "./AllProductsDesign.js/AllProductsDesign";
 const AllProducts = () => {
   const [allProducts, setAllProducts] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/products").then((res) => {
+    axios.get("https://limitless-shore-74822.herokuapp.com/products").then((res) => {
       setAllProducts(res.data);
     });
   }, []);

@@ -14,6 +14,7 @@ import MyOrder from "./Pages/Dashboard/MyOrder/MyOrder";
 import ManageOrder from "./Pages/Dashboard/ManageOrder/ManageOrder";
 import Review from "./Pages/Dashboard/Review/Review";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
+import AdminRoutes from "./Pages/AdminRoutes/AdminRoutes";
 
 function App() {
   return (
@@ -34,7 +35,12 @@ function App() {
                 </PrivateRoute>
               }
             >
-              <Route path="addproducts" element={<AddProducts />} />
+              <Route path="addproducts" 
+              element={
+                <AdminRoutes>
+                  <AddProducts />
+                </AdminRoutes> 
+              } />
               <Route path="myorder" element={<MyOrder />} />
               <Route path="manageorder" element={<ManageOrder />} />
               <Route path="review" element={<Review />} />
